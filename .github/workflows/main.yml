@@ -26,10 +26,8 @@ jobs:
       uses: actions/setup-node@v2-beta
       with:
         version: 12
+        cmd: npm install
     
-    - name: creating depe
-      run: npm install
-
     - name: creating build
       run: npm run build
     
