@@ -50,7 +50,6 @@ function App() {
 
   return (
     <>
-    <h1>ABC</h1>
       <Appbar />
       <LoadingIndicator/>
       <Country handleCountryChange={handleCountryChange} />
