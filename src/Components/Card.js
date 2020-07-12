@@ -47,7 +47,7 @@ export default function OutlinedCard({ data, country }) {
             const { results } = await response.json();
             delete results[0].source;
             delete results[0].total_unresolved;
-            //console.log(results[0])
+            console.log(results[0])
             setGlobalData(results[0]);
 
         }
