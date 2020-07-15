@@ -3,6 +3,7 @@ import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import { trackPromise } from 'react-promise-tracker';
 
 
 
@@ -40,13 +41,15 @@ export const Country = ({ handleCountryChange }) => {
                     countryitems[0][key].title,
                     countryitems[0][key].code
                 ];
-            })
+            });
             //console.log(Countries)
             setCountries(Countries);
 
         }
 
-        getCountries();
+        trackPromise(
+            getCountries()
+            );
 
     }, [])
 
