@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { getName } from 'country-list';
 import Style from './Chart.module.css';
+import { trackPromise } from 'react-promise-tracker';
 
 
 export const Chart = ({ data, country }) => {
@@ -21,7 +22,9 @@ export const Chart = ({ data, country }) => {
 
     }
 
-    getGlobalData();
+    trackPromise(
+      getGlobalData()
+      );
 
   }, [])
 
