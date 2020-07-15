@@ -31,7 +31,7 @@ export default function ButtonAppBar() {
         <AppBar position="static">
 
           <Toolbar>
-            <img src={process.env.PUBLIC_URL + "/images/logo.jpg"} alt="logo" width="50px" height="50px"/>
+            <img src={process.env.PUBLIC_URL + "/images/logo.png"} alt="logo" width="50px" height="50px"/>
             <Typography variant="h6" className={classes.title}>
               COVID-19 TRACKER APP
           </Typography>
